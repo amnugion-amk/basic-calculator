@@ -1,12 +1,23 @@
 import random
-listofNumbers = [3, 4, 5] 
+listofNumbers = []
 
-for i in range(1, random.randint(1, 100+1)): 
-    newRandomInt = random.randint(1, 1000)
-    listofNumbers.append(newRandomInt) 
-    
+while True:
+    inp = input("Would you like to add a new number (y)?    ")
+    if inp == "y":
+        try:
+            targetVal = int(input("Enter the new integer:   "))
+            listofNumbers.append(targetVal)
+            print()
+            print("--------")
+        except ValueError:
+            print("Invalid input!")
+            print()
+            print("--------")
+    else:
+        break
+  
 newNumber = 0 
 for i in listofNumbers: 
      newNumber += i 
      
-print("here you idiot who is too lazy to count: "+str(newNumber)) 
+print(f"Result: {newNumber}")
