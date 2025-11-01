@@ -4,4 +4,4 @@ newNumber = 0
 for i in listofNumbers:
     newNumber += i
     
-print(newNumber)
+print("Here is the new number: "+str(newNumber))
